@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Xiomara Edith Salvatierra Ramos — Médico cirujano | Investigación médica</title>
-  <meta name="description" content="Asesoría en investigación médica, redacción científica, tesis, artículos académicos y análisis de datos. Médico cirujano e investigadora en formación." />
+  <title>Xiomara Edith Salvatierra Ramos — Médica cirujana | Investigación y redacción científica</title>
+  <meta name="description" content="Médica cirujana egresada 2025, cursando Maestría en Medicina y especialización en redacción científica. Apasionada por la investigación médica, el análisis de datos y la publicación científica." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -873,9 +873,10 @@
       .hero__actions { justify-content: center; }
       .hero__tagline { justify-content: center; }
 
-      /* Sobre mí */
-      .sobre__grid { grid-template-columns: 1fr; gap: 28px; }
-      .sobre__sidebar { position: static; }
+      /* Sobre mí: texto primero, estadísticas abajo */
+      #sobre-mi .sobre__grid { grid-template-columns: 1fr !important; gap: 28px; }
+      .sobre__content { order: 1; }
+      .sobre__sidebar { position: static; order: 2; }
       .sobre__sidebar-card {
         display: flex;
         justify-content: space-around;
@@ -923,8 +924,8 @@
       .footer__inner { flex-direction: column; align-items: center; text-align: center; }
       .footer__links { justify-content: center; flex-wrap: wrap; gap: 10px 18px; }
 
-      /* Sobre sidebar columna en tablet */
-      .sobre__sidebar-card { flex-direction: column; text-align: left; gap: 0; }
+      /* Sobre mí sidebar: columna vertical en móvil */
+      .sobre__sidebar-card { flex-direction: column; text-align: left; }
       .sobre__stat {
         border-right: none;
         padding: 0 0 14px;
@@ -1071,17 +1072,17 @@
   <div class="navbar__inner">
     <div class="navbar__brand">
       <span class="navbar__name">Xiomara Salvatierra Ramos</span>
-      <span class="navbar__role">Médico General Colegiada · Investigadora</span>
+      <span class="navbar__role">Médica Cirujana · Investigadora en Formación</span>
     </div>
     <ul class="navbar__links">
       <li><a href="#sobre-mi">Sobre mí</a></li>
       <li><a href="#areas">Especialización</a></li>
       <li><a href="#formacion">Formación</a></li>
-      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#servicios">Mi formación</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
     <div class="navbar__cta">
-      <a href="#contacto" class="btn btn-primary">Solicitar asesoría</a>
+      <a href="#contacto" class="btn btn-primary">Conectemos</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -1094,10 +1095,10 @@
   <a href="#areas" role="menuitem">Áreas de especialización</a>
   <a href="#formacion" role="menuitem">Formación académica</a>
   <a href="#experiencia" role="menuitem">Experiencia clínica</a>
-  <a href="#servicios" role="menuitem">Servicios</a>
+  <a href="#servicios" role="menuitem">Mi formación</a>
   <a href="#vision" role="menuitem">Visión</a>
   <a href="#contacto" role="menuitem">Contacto</a>
-  <a href="#contacto" role="menuitem" class="btn btn-primary" style="margin-top:8px; justify-content:center; text-align:center;">Solicitar asesoría</a>
+  <a href="#contacto" role="menuitem" class="btn btn-primary" style="margin-top:8px; justify-content:center; text-align:center;">Conectemos</a>
 </div>
 
 <!-- ═══ HERO ══════════════════════════════════════════════ -->
@@ -1106,9 +1107,9 @@
     <div class="hero__grid">
       <div class="hero__content fade-up">
         <h1 class="hero__name">Xiomara Edith<br>Salvatierra Ramos</h1>
-        <p class="hero__title">Médico cirujano &nbsp;·&nbsp; Médico General Colegiada &nbsp;·&nbsp; Investigadora</p>
+        <p class="hero__title">Médica cirujana &nbsp;·&nbsp; Cursando Maestría en Medicina &nbsp;·&nbsp; Redacción Científica</p>
         <div class="hero__separator"></div>
-        <p class="hero__subtitle">Asesoría en investigación médica, redacción científica, tesis, artículos académicos y análisis de datos. Acompañamiento riguroso y personalizado para estudiantes de ciencias de la salud.</p>
+        <p class="hero__subtitle">Egresada de Medicina (2025), actualmente cursando una Maestría en Medicina y una especialización en redacción científica. Me apasionan la investigación médica, la metodología científica y el análisis de datos.</p>
         <div class="hero__actions">
           <a href="https://wa.link/3cb9ha" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.135.561 4.14 1.541 5.873L.057 23.943l6.224-1.453A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.894 0-3.664-.497-5.196-1.364l-.373-.215-3.694.863.931-3.586-.242-.38A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
@@ -1172,7 +1173,7 @@
         <blockquote class="sobre__highlight">
           Creo firmemente que la investigación rigurosa es el puente entre la formación médica y el impacto real en salud pública. Por eso dedico parte de mi trabajo a acompañar a estudiantes en ese proceso.
         </blockquote>
-        <p>Brindo asesoría académica particular a estudiantes de diversas universidades —incluyendo la Universidad San Ignacio de Loyola— en proyectos de tesis, artículos científicos y análisis estadístico, manejando con precisión las normas Vancouver y APA. Mi objetivo a mediano plazo es integrarme a la docencia universitaria en metodología de la investigación y participar como jurado en procesos de evaluación de tesis.</p>
+        <p>Tengo especial interés en la metodología de la investigación, la redacción científica y la bioestadística aplicada a la salud. Manejo con precisión las normas Vancouver y APA, y continúo desarrollando mis competencias en análisis estadístico con SPSS, Excel y Python. Mi objetivo a mediano plazo es integrarme a la docencia universitaria en metodología de la investigación y participar como jurado en proyectos de tesis.</p>
       </div>
     </div>
   </div>
@@ -1384,66 +1385,66 @@
 <!-- ═══ SERVICIOS ACADÉMICOS ═══════════════════════════════ -->
 <section id="servicios" class="bg-white">
   <div class="container">
-    <p class="section-label fade-up">Servicios académicos</p>
-    <h2 class="section-title fade-up">¿En qué puedo acompañarte?</h2>
+    <p class="section-label fade-up">Formación activa</p>
+    <h2 class="section-title fade-up">Áreas en las que me formo</h2>
     <div class="divider-line fade-up"></div>
-    <p class="section-lead fade-up">Acompañamiento riguroso y personalizado para estudiantes e investigadores de ciencias de la salud en cada etapa de su proceso académico.</p>
+    <p class="section-lead fade-up">Áreas en las que me encuentro en formación activa, combinando mi Maestría en Medicina, la especialización en redacción científica y el aprendizaje continuo de herramientas de análisis de datos.</p>
     <br><br>
     <div class="servicios__grid stagger fade-up">
 
       <div class="servicio-item" style="--i:0">
         <div class="servicio-num">01</div>
         <div class="servicio-content">
-          <h3>Asesoría para proyectos de investigación</h3>
-          <p>Orientación desde la formulación del problema hasta el diseño metodológico, con enfoque en la coherencia científica y la viabilidad del estudio.</p>
+          <h3>Metodología de la investigación</h3>
+          <p>Me formo en el diseño de proyectos científicos: planteamiento del problema, objetivos, marco teórico y estrategia metodológica aplicada a ciencias de la salud.</p>
         </div>
       </div>
 
       <div class="servicio-item" style="--i:1">
         <div class="servicio-num">02</div>
         <div class="servicio-content">
-          <h3>Revisión y mejora de tesis</h3>
-          <p>Revisión profunda de estructura, argumentación, coherencia metodológica y redacción académica de trabajos de pregrado y posgrado.</p>
+          <h3>Redacción científica</h3>
+          <p>Actualmente curso la Especialización en Redacción de Artículos Científicos y Publicación en la Universidad Continental (abril–julio 2026).</p>
         </div>
       </div>
 
       <div class="servicio-item" style="--i:2">
         <div class="servicio-num">03</div>
         <div class="servicio-content">
-          <h3>Redacción de artículos científicos</h3>
-          <p>Apoyo en la escritura y estructuración de manuscritos para revistas científicas, bajo normas editoriales internacionales.</p>
+          <h3>Artículos originales y revisiones sistemáticas</h3>
+          <p>Aprendo la estructura y elaboración de manuscritos para revistas indizadas bajo estándares editoriales internacionales como parte de mi especialización.</p>
         </div>
       </div>
 
       <div class="servicio-item" style="--i:3">
         <div class="servicio-num">04</div>
         <div class="servicio-content">
-          <h3>Preparación para sustentaciones</h3>
-          <p>Acompañamiento en la organización, presentación y defensa de proyectos de tesis, con simulacros y retroalimentación estratégica.</p>
+          <h3>Presentación y sustentación académica</h3>
+          <p>Desarrollo competencias para la exposición y defensa de proyectos de investigación en el ámbito universitario.</p>
         </div>
       </div>
 
       <div class="servicio-item" style="--i:4">
         <div class="servicio-num">05</div>
         <div class="servicio-content">
-          <h3>Corrección bajo normas Vancouver y APA</h3>
-          <p>Revisión y corrección de citas, referencias bibliográficas y formato general según los reglamentos de cada universidad o revista.</p>
+          <h3>Normas Vancouver y APA</h3>
+          <p>Practico y aplico los dos sistemas de citación más utilizados en ciencias de la salud y humanidades, adaptados a distintos formatos de publicación.</p>
         </div>
       </div>
 
       <div class="servicio-item" style="--i:5">
         <div class="servicio-num">06</div>
         <div class="servicio-content">
-          <h3>Apoyo en análisis estadístico</h3>
-          <p>Selección de pruebas estadísticas, procesamiento de datos y elaboración de tablas e interpretación de resultados con SPSS, Excel y Python.</p>
+          <h3>Análisis estadístico de datos</h3>
+          <p>Aprendo y aplico SPSS, Excel avanzado y Python para el procesamiento, análisis e interpretación de datos cuantitativos en investigación clínica.</p>
         </div>
       </div>
 
       <div class="servicio-item" style="--i:6">
         <div class="servicio-num">07</div>
         <div class="servicio-content">
-          <h3>Orientación metodológica</h3>
-          <p>Asesoría especializada en tipos de estudio, diseño de instrumentos, muestreo, operacionalización de variables y validación de herramientas.</p>
+          <h3>Diseño metodológico</h3>
+          <p>Me especializo en operacionalización de variables, tipos de estudio, muestreo y diseño de instrumentos de investigación científica.</p>
         </div>
       </div>
 
@@ -1476,11 +1477,11 @@
   <div class="container">
     <div class="contacto__grid">
       <div class="fade-up">
-        <p class="section-label">Trabajemos juntos</p>
-        <h2 class="section-title">Solicita una asesoría</h2>
+        <p class="section-label">Conectemos</p>
+        <h2 class="section-title">¿Hablamos?</h2>
         <div class="divider-line"></div>
-        <h3>¿Tienes un proyecto de investigación, tesis o artículo?</h3>
-        <p>Estoy disponible para brindar asesoría académica personalizada a estudiantes de pregrado, posgrado y docentes de ciencias de la salud. Cuéntame en qué puedo ayudarte.</p>
+        <h3>¿Te interesa la investigación médica?</h3>
+        <p>Estoy en plena formación y me apasiona conectar con otros estudiantes y profesionales de las ciencias de la salud. Si quieres saber más sobre mi trayectoria o intercambiar ideas sobre investigación científica, escríbeme.</p>
 
         <div class="contacto__detail">
           <div class="contacto__detail-icon">
@@ -1517,7 +1518,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.135.561 4.14 1.541 5.873L.057 23.943l6.224-1.453A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.894 0-3.664-.497-5.196-1.364l-.373-.215-3.694.863.931-3.586-.242-.38A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
             Contactar por WhatsApp
           </a>
-          <p style="font-size:.75rem; color:var(--text-soft); margin-top:10px; text-align:center;">Respuesta rápida · Sin compromiso</p>
+          <p style="font-size:.75rem; color:var(--text-soft); margin-top:10px; text-align:center;">Respuesta rápida · Con gusto te escribo</p>
         </div>
       </div>
 
@@ -1534,16 +1535,15 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="tipo">Tipo de asesoría *</label>
+            <label for="tipo">Motivo de contacto *</label>
             <select id="tipo" name="tipo" required>
               <option value="" disabled selected>Selecciona una opción</option>
-              <option value="proyecto">Proyecto de investigación</option>
-              <option value="tesis">Tesis (pregrado / posgrado)</option>
-              <option value="articulo">Artículo científico</option>
-              <option value="estadistica">Análisis estadístico</option>
-              <option value="sustentacion">Preparación para sustentación</option>
-              <option value="normas">Corrección Vancouver / APA</option>
-              <option value="otro">Otro</option>
+              <option value="trayectoria">Quiero conocer tu trayectoria</option>
+              <option value="investigacion">Me interesa la investigación médica</option>
+              <option value="colaboracion">Colaboración o proyecto en común</option>
+              <option value="redaccion">Me interesa la redacción científica</option>
+              <option value="datos">Consulta sobre análisis de datos</option>
+              <option value="otro">Otro tema</option>
             </select>
           </div>
           <div class="form-group">
@@ -1552,14 +1552,14 @@
           </div>
           <div class="form-group">
             <label for="mensaje">Mensaje *</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Cuéntame brevemente sobre tu proyecto o la ayuda que necesitas..." required></textarea>
+            <textarea id="mensaje" name="mensaje" placeholder="Cuéntame brevemente de qué te gustaría hablar o qué te interesa de mi perfil..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary form-submit">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             Enviar consulta
           </button>
           <div class="form-success" id="formSuccess" role="alert">
-            Mensaje enviado correctamente. Me pondré en contacto contigo pronto.
+            Mensaje enviado. ¡Con gusto me pongo en contacto contigo pronto!
           </div>
         </form>
       </div>
@@ -1573,13 +1573,13 @@
     <div class="footer__inner">
       <div>
         <div class="footer__name">Xiomara Edith Salvatierra Ramos</div>
-        <div class="footer__role">Médico cirujano &nbsp;·&nbsp; Investigadora &nbsp;·&nbsp; Asesora académica</div>
+        <div class="footer__role">Médica cirujana &nbsp;·&nbsp; Investigadora en formación &nbsp;·&nbsp; Maestría en Medicina</div>
       </div>
       <ul class="footer__links">
         <li><a href="#sobre-mi">Sobre mí</a></li>
         <li><a href="#areas">Especialización</a></li>
         <li><a href="#formacion">Formación</a></li>
-        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#servicios">Mi formación</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
